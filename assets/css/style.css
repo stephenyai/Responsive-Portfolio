@@ -1,0 +1,286 @@
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Delius Swash Caps', cursive;
+}
+body {
+	background-image: url("../images/ricepaper.png");
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+}
+
+/*Header CSS */
+
+a:link {
+	text-decoration: none;
+}
+
+.about, .portfolio, .contacts {
+	padding: 0 20px;
+	color: #777777;
+}
+
+.about, .portfolio {
+	border-right: 1px solid #cccccc;
+}
+
+.main {
+	width: 100%;
+	border-bottom: 2px solid #cccccc;
+	background-color: #ffffff;	
+}
+
+.mainHeader {
+	border-color: #cccccc;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+#myName {
+	background-color: #4aaaa5;
+	color: #ffffff;
+	font-size: 35px;
+	padding: 25px;
+}
+
+.links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*Index CSS*/
+
+#content {
+	width: 960px;
+	margin: 40px auto;
+	padding: 20px;
+	flex: 1 0 auto;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+}
+
+
+.text {
+	margin-top: 25px;
+	display: flex;
+	flex-wrap: wrap;	
+	justify-content: flex-start;
+	float: left;	
+}
+
+
+/*Contact CSS */
+
+.mainContact {
+	display: flex;
+	flex: 1 0 auto;
+}
+
+.contact {
+	width: 960px;
+	margin: 40px auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #dddddd;
+	background-color: #ffffff;
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+.inputText {
+	display: flex;
+	align-items: flex-start;	
+	flex-direction: column;
+}
+
+#messageText {
+	height: 200px;
+}
+
+input {
+	width: 100%;
+}
+
+h2 {
+	color: #4aaaa5;
+	font-size: 30px;
+	padding: 10px 0px 20px 0px;
+	border-bottom: 2px solid #dddddd;
+	margin-bottom: 30px;
+}
+
+img {
+	margin: 15px;
+}
+
+p {
+	line-height: 1.6;
+	color: #777777;
+}
+
+.words {
+	float: left;
+}
+
+#nameText, #emailText {
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+#submit {
+	margin-top: 10px;
+	height: 30px;
+	width: 70px;
+	color: #ffffff;
+	background-color: #4aaaa5;
+}
+
+/*Portofolio CSS */
+
+.photoSection {
+	display: flex;
+	flex: 1 0 auto;
+}
+
+.photos {
+	width: 960px;
+	margin: 40px auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #dddddd;
+	background-color: #ffffff;
+}
+
+/* Footer CSS */
+
+footer {
+	flex-shrink: 0;
+	border-top: 8px solid #4aaaa5;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	color: #ffffff;
+	background-color: #777777;
+
+}
+
+
+/* Media Query Screen */
+
+@media screen and (max-width: 980px) {
+
+	.header {
+		width: 75%;
+		margin: 0 auto 0 30px;
+	}
+
+	#content, .contact, .photos {
+		width: 75%;	
+		margin-left: 30px;
+	}
+
+	.mainHeader {
+		width: 100%;
+	}
+}
+
+/*Tried using CSS Grid but got stuck*/
+
+/*	.wrapper {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		grid-template-rows: 3fr 1fr auto;
+	}
+
+	.box {
+		grid-column: 1/3;
+		grid-row: 1/3;
+		background-color: #ffffff;
+		border: 1px solid #dddddd;
+	}
+*/
+
+@media screen and (max-width: 768px) {
+
+	.header {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	#content, .contact, .photos {
+		width: 95%;	
+		margin: 30px auto;
+	}	
+
+	.mainHeader {
+		width: 100%;
+	}
+
+	.photoSection {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	.header {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			"name name"
+			"links links";
+		width: 100%;
+		top: 0;
+		overflow: hidden;
+		position: fixed;
+	}
+
+	#myName {
+		grid-area: name;
+		text-align: center
+	}
+
+	.links {
+		grid-area: links;
+		justify-content: center;
+		background-color: #ffffff;
+	}
+
+	#content {
+		margin-top: 185px;
+	}
+
+	.mainContact {
+		margin: 170px 10px;
+	}
+
+	.photoSection {
+		margin: 160px auto;
+	}
+
+	.images {
+		margin-left: auto;
+ 		margin-right: auto;
+  		width: 50%;
+	}
+}
+
+
+
+
